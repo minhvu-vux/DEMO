@@ -465,8 +465,11 @@ menu.classList.add("active");
 closeVideo();
 }
 function goFullscreen(){
-if(!document.fullscreenElement) document.documentElement.requestFullscreen();
+  const el = document.documentElement;
+  if(el.requestFullscreen) el.requestFullscreen();
+  else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen(); // iOS Safari
 }
+
 
 /* slideshow */
 document.querySelectorAll(".slideshow").forEach(show=>{
@@ -512,4 +515,5 @@ function closeVideo(){
 
 </body>
 </html>
+
 
