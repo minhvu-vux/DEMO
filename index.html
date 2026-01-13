@@ -269,6 +269,57 @@ box-shadow:
 0 0 28px rgba(255,160,210,1);
 
 }
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px){
+
+  body{overflow:hidden}
+
+  .header{
+    top:10px;left:12px;right:12px;
+  }
+  .header img{width:40px;height:40px}
+  .header .school{font-size:14px}
+  .header .slogan{font-size:11px}
+
+  #menu h1{font-size:34px !important;text-align:center}
+  #menu .subtitle{font-size:15px;text-align:center}
+
+  .card{
+    padding:22px 10px;
+    font-size:16px;
+    border-radius:18px;
+  }
+
+  .content-box{
+    padding:18px;
+    border-radius:22px;
+  }
+
+  .text h2{font-size:22px}
+  .text ul{font-size:15px}
+
+  .back-btn{
+    top:70px;left:12px;
+    padding:8px 14px;
+    font-size:13px;
+  }
+
+  .video-btn{
+    font-size:13px;
+    padding:10px 16px;
+  }
+
+  .fullscreen-btn{
+    right:16px;bottom:18px;
+    padding:10px 16px;
+    font-size:13px;
+  }
+}
+
+/* chặn double tap zoom trên mobile */
+*{
+  touch-action: manipulation;
+}
 
 </style>
 </head>
@@ -461,3 +512,4 @@ function closeVideo(){
 
 </body>
 </html>
+
