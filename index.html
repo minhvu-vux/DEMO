@@ -320,6 +320,107 @@ box-shadow:
 *{
   touch-action: manipulation;
 }
+/* ================= MOBILE COMPACT UI ================= */
+@media (max-width: 768px){
+
+  body{overflow:hidden}
+
+  /* HEADER GỌN */
+  .header{
+    top:8px;left:10px;right:10px;
+    gap:8px;
+  }
+  .header img{width:36px;height:36px}
+  .header .school{font-size:13px}
+  .header .slogan{font-size:10px}
+
+  /* MENU */
+  #menu h1{
+    font-size:28px !important;
+    line-height:1.2;
+    text-align:center;
+  }
+  #menu .subtitle{
+    font-size:13px;
+    text-align:center;
+    margin-bottom:18px;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .card{
+    padding:16px 6px;
+    font-size:14px;
+    border-radius:16px;
+  }
+
+  /* KHUNG NỘI DUNG */
+  .screen{
+    padding:70px 10px 14px;
+  }
+
+  .content-box{
+    grid-template-columns:1fr;
+    padding:14px;
+    border-radius:18px;
+    gap:14px;
+  }
+
+  .text h2{font-size:20px}
+  .text ul{font-size:14px;line-height:1.6}
+
+  .tip{font-size:13px;padding:10px}
+
+  /* SLIDESHOW TO HƠN */
+  .slideshow{
+    min-height:220px;
+    border-radius:18px;
+  }
+
+  /* NÚT */
+  .back-btn{
+    top:56px;left:10px;
+    font-size:12px;
+    padding:8px 12px;
+  }
+
+  .video-btn{
+    font-size:12px;
+    padding:8px 14px;
+    border-radius:14px;
+  }
+
+  .fullscreen-btn{
+    bottom:14px;right:14px;
+    font-size:12px;
+    padding:10px 14px;
+  }
+
+  /* ẨN HIỆU ỨNG NẶNG CHO MÁY YẾU */
+  .blob{display:none}
+  .hearts{opacity:.35}
+}
+
+/* chặn zoom khi double tap */
+*{touch-action:manipulation}
+#mobileIndicator{
+  position:fixed;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(255,140,190,.9);
+  color:white;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  z-index:20;
+}
+
+@media(min-width:769px){
+  #mobileIndicator{display:none}
+}
 
 </style>
 </head>
@@ -332,6 +433,8 @@ box-shadow:
 <div class="blob peach"></div>
 <div class="blob violet"></div>
 </div>
+
+<div id="mobileIndicator">1 / 5</div>
 
 <div class="hearts" id="hearts"></div>
 
@@ -515,5 +618,6 @@ function closeVideo(){
 
 </body>
 </html>
+
 
 
